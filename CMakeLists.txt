@@ -5,6 +5,8 @@ set(KF_DEP_VERSION "6.28.0") # handled by release scripts
 set(REQUIRED_QT_VERSION 6.9.0)
 project(KDeclarative VERSION ${KF_VERSION})
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # Dependencies
 include(FeatureSummary)
 find_package(ECM 6.28.0  NO_MODULE)

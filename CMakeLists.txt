@@ -1,8 +1,8 @@
-cmake_minimum_required(VERSION 3.29)
+cmake_minimum_required(VERSION 3.30)
 
 set(KF_VERSION "6.30.0") # handled by release scripts
 set(KF_DEP_VERSION "6.30.0") # handled by release scripts
-set(REQUIRED_QT_VERSION 6.9.0)
+set(REQUIRED_QT_VERSION 6.10.0)
 project(KDeclarative VERSION ${KF_VERSION})
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -27,6 +27,7 @@ include(ECMQmlModule)
 include(CMakePackageConfigHelpers)
 include(ECMGenerateQDoc)
 include(ECMFindQmlModule)
+include(ECMInstalledLibraryCheck)
 
 find_package(Qt6 ${REQUIRED_QT_VERSION} NO_MODULE REQUIRED Qml Quick Gui)
 find_package(KF6I18n ${KF_DEP_VERSION} REQUIRED)
